@@ -86,6 +86,20 @@ function initMap() {
           radius: Math.sqrt(citymapGoods [city].population) * 100
         });
       }
+
+      for (var city in citymapMedium) {
+        // Add the circle for this city to the map.
+        var cityCircle = new google.maps.Circle({
+          strokeColor: 'orange',
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: 'orange', 
+          fillOpacity: 0.35,
+          map: map,
+          center: citymapMedium[city].center,
+          radius: Math.sqrt(citymapMedium [city].population) * 100
+        });
+      }
   }
   var citymap = {
     philippines: {
@@ -96,10 +110,6 @@ function initMap() {
       center: {lat: 14.5441, lng: 121.0578},
       population: 50
     },
-    tejeros: {
-      center: {lat: 14.5715, lng: 121.0142},
-      population: 8
-    }
   };
 
   var citymapGoods = {
@@ -108,6 +118,15 @@ function initMap() {
         population: 5
       }
   };
+
+  var citymapMedium = {
+    tejeros: {
+        center: {lat: 14.5715, lng: 121.0142},
+        population: 8
+      }
+  };
+
+  
 
 
 
