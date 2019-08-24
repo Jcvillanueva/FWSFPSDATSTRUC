@@ -83,7 +83,7 @@ function initMap() {
           fillOpacity: 0.35,
           map: map,
           center: citymapGoods[city].center,
-          radius: Math.sqrt(citymapGoods[city].population) * 100
+          radius: Math.sqrt(citymapGoods [city].population) * 100
         });
       }
   }
