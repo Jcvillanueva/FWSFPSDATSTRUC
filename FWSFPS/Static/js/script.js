@@ -66,32 +66,49 @@ function initMap() {
           strokeColor: '#FF0000',
           strokeOpacity: 0.8,
           strokeWeight: 2,
-          fillColor: '#FF0000',
+          fillColor: '#FF0000', 
           fillOpacity: 0.35,
           map: map,
           center: citymap[city].center,
           radius: Math.sqrt(citymap[city].population) * 100
         });
       }
+      for (var city in citymapGoods) {
+        // Add the circle for this city to the map.
+        var cityCircle = new google.maps.Circle({
+          strokeColor: 'green',
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: 'green', 
+          fillOpacity: 0.35,
+          map: map,
+          center: citymapGoods[city].center,
+          radius: Math.sqrt(citymapGoods[city].population) * 100
+        });
+      }
   }
   var citymap = {
-    chicago: {
-      center: {lat: 41.878, lng: -87.629},
-      population: 2714856
+    philippines: {
+      center: {lat: 14.5547, lng: 121.0244},
+      population: 10
     },
-    newyork: {
-      center: {lat: 40.714, lng: -74.005},
-      population: 8405837
+    pemboMakati: {
+      center: {lat: 14.5441, lng: 121.0578},
+      population: 50
     },
-    losangeles: {
-      center: {lat: 34.052, lng: -118.243},
-      population: 3857799
-    },
-    vancouver: {
-      center: {lat: 49.25, lng: -123.1},
-      population: 603502
+    tejeros: {
+      center: {lat: 14.5715, lng: 121.0142},
+      population: 8
     }
   };
+
+  var citymapGoods = {
+    belair: {
+        center: {lat: 14.5639, lng:121.0263},
+        population: 5
+      }
+  };
+
 
 
   
