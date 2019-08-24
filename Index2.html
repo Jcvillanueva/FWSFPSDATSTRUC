@@ -1,0 +1,46 @@
+<html>
+  <head>
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/bootstrap.bundle.js"></script>
+        <script src="https://d3js.org/d3.v4.js"></script>
+        <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+        <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+        
+        <link rel= "stylesheet" href="css/bootstrap.css"></script>
+        <link rel= "stylesheet" href= "css/bootstrap-theme.css"></script>
+        <link rel= "stylesheet" href= "css/bootstrap-grid.css"></script>
+        <link rel= "stylesheet" href= "css/bootstrap-reboot.css"></script>
+        <link rel="stylesheet" type="text/css"href="FWSFPS/Static/css/main.css">
+  </head>
+
+  <header>
+        <ul>
+                <li><a href="default.asp">Home</a></li>
+                <li><a href="news.asp">News</a></li>
+                <li><a href="contact.asp">Contact</a></li>
+                <li><a href="about.asp">Report an incident</a></li>
+               </ul>
+  </header>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script type="text/javascript" src="FWSFPS/Static/js/script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHdoXsxaGM-Waq1VYRcQc4WR6FRR6410k&callback=initMap"></script>
+    <script>
+        svg
+      .selectAll("myCircles")
+      .data(markers)
+      .enter()
+      .append("circle")
+        .attr("cx", function(d){ return projection([d.long, d.lat])[0] })
+        .attr("cy", function(d){ return projection([d.long, d.lat])[1] })
+        .attr("r", 14)
+        .style("fill", "69b3a2")
+        .attr("stroke", "#69b3a2")
+        .attr("stroke-width", 3)
+        .attr("fill-opacity", .4)
+    </script>
+  </body>
+</html>
