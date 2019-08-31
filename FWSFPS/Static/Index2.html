@@ -6,26 +6,58 @@
         <script src="https://d3js.org/d3.v4.js"></script>
         <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
         <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
         
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
         <link rel= "stylesheet" href="css/bootstrap.css"></script>
         <link rel= "stylesheet" href= "css/bootstrap-theme.css"></script>
         <link rel= "stylesheet" href= "css/bootstrap-grid.css"></script>
         <link rel= "stylesheet" href= "css/bootstrap-reboot.css"></script>
         <link rel="stylesheet"  href="css/main.css"></script>
-  
-      </head>
+    </head>
 
-  <header>
-        <ul>
-                <li><a href="default.asp">Home</a></li>
-                <li><a href="news.asp">News</a></li>
-                <li><a href="contact.asp">Contact</a></li>
-                <li><a href="about.asp">Report an incident</a></li>
-               </ul>
-  </header>
+
   <body>
-    <h3>My Google Maps Demo</h3>
+<header>  
+  <!--Navbar Start-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Iwas Baha PH</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="#">News</a>
+          <a class="nav-item nav-link" href="#">Report an Incident</a>
+          <a class="nav-item nav-link" href="#">About</a>
+        </div>
+      </div>
+    </nav>
+    
+  <!--Navbar End--> 
+</header>
+  
+
+    <!--Weather Widget Start-->
+<a class="weatherwidget-io" href="https://forecast7.com/en/14d55121d02/makati/" data-label_1="MAKATI" data-label_2="WEATHER" data-theme="dark" >MAKATI WEATHER</a>
+<script>
+!function(d,s,id)
+  {
+    var js,fjs=d.getElementsByTagName(s)[0];
+    if(!d.getElementById(id))
+      {
+      js=d.createElement(s);
+      js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';
+      fjs.parentNode.insertBefore(js,fjs);
+      }
+  }
+  (document,'script','weatherwidget-io-js');
+
+</script>
+    <!--Weather Widget End-->
+
+    <!--Map-->
     <div id="map"></div>
     <script type="text/javascript" src="js/script.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHdoXsxaGM-Waq1VYRcQc4WR6FRR6410k&callback=initMap"></script>
@@ -43,5 +75,7 @@
         .attr("stroke-width", 3)
         .attr("fill-opacity", .4)
     </script>
+  <!--Map End-->
+    
   </body>
 </html>
