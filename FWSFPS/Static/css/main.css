@@ -14,7 +14,14 @@ body {
   position: center;
   float: left;
   text-align: center;
-  
+}
+
+.collapse navbar-collapse{
+  font-family: 'Squada One', cursive;
+}
+
+.navbar-nav{
+  font-family: 'Squada One', cursive;
 }
 h3{
   color:white;
