@@ -9,9 +9,11 @@ body {
 
 
 .navbar-brand{
+  font-family: 'Squada One', cursive;
   font-size: 15px;
   position: center;
   float: left;
+  text-align: center;
   
 }
 h3{
